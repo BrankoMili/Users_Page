@@ -57,10 +57,10 @@ h3 {
   margin: 0.15rem;
 }
 
-.wholeuser:hover {
+/* .wholeuser:hover {
   border: 1px solid #849fff;
   border-radius: 15px;
-}
+} */
 
 .search {
   margin-left: 11%;
