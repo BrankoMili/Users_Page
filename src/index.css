@@ -1,13 +1,120 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%/2, max(64px, 100%/3)), 12rem)
+  );
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.wholeuser {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  text-align: left;
+}
+
+h1 {
+  margin-left: 11%;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.interest {
+  color: #87a0ce;
+  font-weight: 600;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #849fff;
+  border-radius: 20px;
+  margin: 0.15rem;
+}
+
+.wholeuser:hover {
+  border: 1px solid #849fff;
+  border-radius: 15px;
+}
+
+.search {
+  margin-left: 11%;
+  padding: 17px 45px;
+  border: 1px solid #849fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: url("./icon/magnifying-glass-search-pngrepo-com.png") top left
+    no-repeat;
+  background-size: 1.3rem;
+  background-position: 0.8rem;
+}
+
+.search:focus {
+  outline: #849fff;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+input::placeholder {
+  color: #373c47;
+}
+
+.filter {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  justify-content: right;
+  margin-right: 14%;
+  gap: 1rem;
+}
+
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #373c47;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  text-decoration: none #373c47 solid;
+  transition: all 0.05s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-81:hover {
+  background-color: #849fff !important;
+  color: #fff !important;
+}
+
+.searchicon {
+  width: 1.8rem;
 }

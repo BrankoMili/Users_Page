@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "name": "Anna",
+    "last_name": "Evans",
+    "city_name": "Troy",
+    "country_name": "Michigan",
+    "age": "30",
+    "interests": ["clothes", "stem", "trip"],
+    "image": "anna_evans.jpg",
+    "account_made": ["05", "02", "2020"],
+    "editor": "false",
+    "moderator": "false"
+  },
+  {
+    "id": "2",
+    "name": "Edward",
+    "last_name": "Sanders",
+    "city_name": "Wellington",
+    "country_name": "New Zealand",
+    "age": "28",
+    "interests": ["electric", "gadget", "summer", "road"],
+    "image": "edward_sanders.jpg",
+    "account_made": ["22", "08", "2021"],
+    "editor": "true",
+    "moderator": "false"
+  },
+  {
+    "id": "3",
+    "name": "John",
+    "last_name": "Lewis",
+    "city_name": "Atlanta",
+    "country_name": "Georgia",
+    "age": "34",
+    "interests": ["trip", "music", "road"],
+    "image": "john_lewis.jpg",
+    "account_made": ["20", "10", "2022"],
+    "editor": "false",
+    "moderator": "false"
+  },
+  {
+    "id": "4",
+    "name": "Maria",
+    "last_name": "Martinez",
+    "city_name": "Madrid",
+    "country_name": "Spain",
+    "age": "27",
+    "interests": ["mountain", "clothes", "nature"],
+    "image": "maria_martinez.jpg",
+    "account_made": ["20", "05", "2020"],
+    "editor": "true",
+    "moderator": "true"
+  },
+  {
+    "id": "5",
+    "name": "Philip",
+    "last_name": "Parker",
+    "city_name": "Lubbock",
+    "country_name": "Texas",
+    "age": "30",
+    "interests": ["vintage", "cars", "architecture"],
+    "image": "philip_parker.jpg",
+    "account_made": ["10", "12", "2022"],
+    "editor": "false",
+    "moderator": "true"
+  },
+  {
+    "id": "6",
+    "name": "Sara",
+    "last_name": "Reyes",
+    "city_name": "Phoenix",
+    "country_name": "Arizona",
+    "age": "29",
+    "interests": ["photography", "trip", "city", "clouds"],
+    "image": "sara_reyes.jpg",
+    "account_made": ["10", "05", "2022"],
+    "editor": "false",
+    "moderator": "false"
+  }
+]
