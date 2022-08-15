@@ -60,9 +60,17 @@ function App() {
     const filterUsers = () => {
       let textValue = inputText.toString().toLowerCase();
       const searched = usersClone.filter((person) => {
+        const namelastname = person.name + person.last_name;
+        const lastnamename = person.last_name + person.name;
+        const namelastnamegap = person.name + " " + person.last_name;
+        const lastnamenamegap = person.last_name + " " + person.name;
         return (
           (person.name.toString().toLowerCase().includes(textValue) ||
-            person.last_name.toString().toLowerCase().includes(textValue)) &&
+            person.last_name.toString().toLowerCase().includes(textValue) ||
+            namelastname.toString().toLowerCase().includes(textValue) ||
+            lastnamename.toString().toLowerCase().includes(textValue) ||
+            namelastnamegap.toString().toLowerCase().includes(textValue) ||
+            lastnamenamegap.toString().toLowerCase().includes(textValue)) &&
           (editors ? person.editor === "true" : true) &&
           (newUsers ? person.account_made[2] > "2021" : true) &&
           (moderators ? person.moderator === "true" : true)
