@@ -4,7 +4,7 @@ import User from "./user";
 
 function App() {
   // users data
-  const [users, getUsers] = useState(data);
+  const [users, setUsers] = useState(data);
   const [usersClone] = useState(data);
 
   //buttons clicked/not clicked
@@ -77,7 +77,7 @@ function App() {
           (moderators ? person.moderator === "true" : true)
         );
       });
-      getUsers(searched);
+      setUsers(searched);
     };
     filterUsers();
     // eslint-disable-next-line
