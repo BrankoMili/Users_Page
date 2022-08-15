@@ -17,6 +17,7 @@ function App() {
 
   const editorsFunc = (e) => {
     setEditors(!editors);
+    console.log(e.target);
     // button colors
     if (editors === false) {
       e.preventDefault();

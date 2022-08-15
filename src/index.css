@@ -1,3 +1,10 @@
+*,
+*::after,
+*,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -27,6 +34,13 @@ body {
   align-items: center;
   padding: 1rem 0.5rem;
   text-align: left;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+
+.wholeuser:hover {
+  border: 1px solid #849fff;
+  border-radius: 1rem;
 }
 
 h1 {
