@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-  margin-left: 11%;
+  margin-left: 15%;
   display: flex;
   font-size: 2rem;
   font-weight: 600;
@@ -58,7 +58,8 @@ h3 {
 }
 
 .search {
-  margin-left: 11%;
+  display: flex;
+  margin-left: 15%;
   padding: 17px 45px;
   border: 1px solid #849fff;
   border-radius: 6px;
@@ -84,7 +85,7 @@ input::placeholder {
   margin-bottom: 1rem;
   margin-top: 1rem;
   justify-content: right;
-  margin-right: 8%;
+  margin-right: 15%;
   gap: 1rem;
 }
 
@@ -112,4 +113,40 @@ input::placeholder {
 
 .searchicon {
   width: 1.8rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .filter {
+    justify-content: center;
+    margin-right: 0;
+  }
+  h1 {
+    margin-left: 0;
+    display: flex;
+    font-size: 1.7rem;
+    font-weight: 600;
+    justify-content: center;
+  }
+  .search {
+    margin: 0 auto;
+    padding: 12px 45px;
+    border: 1px solid #849fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    justify-content: center;
+    background-size: 1rem;
+    background-position: 0.6rem;
+  }
+  .button-81 {
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    padding: 1.1rem 0.9rem;
+  }
+  .users {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+  }
 }
