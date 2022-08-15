@@ -120,9 +120,15 @@ input::placeholder {
   transition: all 0.05s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-81:hover {
-  background-color: #849fff !important;
-  color: #fff !important;
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: red;
+  }
+
+  .button-81:hover {
+    background-color: #849fff !important;
+    color: #fff !important;
+  }
 }
 
 .searchicon {
