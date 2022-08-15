@@ -3,86 +3,76 @@ import data from "./data.json";
 import User from "./user";
 
 function App() {
+  // users data
   const [users, getUsers] = useState(data);
-  const [buttons, setButtons] = useState({
-    newUsers: false,
-    editors: false,
-    moderators: false,
-  });
-  const { newUsers, editors, moderators } = buttons;
+  const [usersClone] = useState(data);
+
+  //buttons clicked/not clicked
+  const [newUsers, setNewUsers] = useState(false);
+  const [editors, setEditors] = useState(false);
+  const [moderators, setModerators] = useState(false);
+
+  // search input text
   let [inputText, setInputText] = useState("");
 
   const editorsFunc = (e) => {
+    setEditors(!editors);
+    // button colors
     if (editors === false) {
       e.preventDefault();
       e.target.style.backgroundColor = "#849fff";
       e.target.style.color = "#fff";
-      const setEditors = users.filter((person) => person.editor === "true");
-      getUsers(setEditors);
-      setButtons({ ...buttons, editors: true });
     } else {
       e.target.style.backgroundColor = "#fff";
       e.target.style.color = "#373c47";
-      getUsers(data);
-      setButtons({ ...buttons, editors: false });
     }
   };
 
   const moderatorsFunc = (e) => {
+    setModerators(!moderators);
+    // button colors
     if (moderators === false) {
       e.preventDefault();
       e.target.style.backgroundColor = "#849fff";
       e.target.style.color = "#fff";
-      const setModerators = users.filter(
-        (person) => person.moderator === "true"
-      );
-      getUsers(setModerators);
-      setButtons({ ...buttons, moderators: true });
     } else {
       e.target.style.backgroundColor = "#fff";
       e.target.style.color = "#373c47";
-      getUsers(data);
-      setButtons({ ...buttons, moderators: false });
     }
   };
 
   const newUsersFunc = (e) => {
+    setNewUsers(!newUsers);
+    // button colors
     if (newUsers === false) {
       e.preventDefault();
       e.target.style.backgroundColor = "#849fff";
       e.target.style.color = "#fff";
-      const setNewUsers = users.filter(
-        (person) => person.account_made[2] > "2021"
-      );
-      getUsers(setNewUsers);
-      setButtons({ ...buttons, newUsers: true });
     } else {
       e.target.style.backgroundColor = "#fff";
       e.target.style.color = "#373c47";
-      getUsers(data);
-      setButtons({ ...buttons, newUsers: false });
     }
   };
 
-  const search = () => {
-    let textValue = inputText.toString().toLowerCase();
-    const searched = users.filter((person) => {
-      return (
-        person.name.toString().toLowerCase().includes(textValue) ||
-        person.last_name.toString().toLowerCase().includes(textValue)
-      );
-    });
-    getUsers(searched);
-    if (textValue === "") {
-      getUsers(data);
-    }
-  };
-
+  /* Filter users depending on filters (new users, editors, moderators) and input
+  on the search box */
   useEffect(() => {
-    getUsers(data);
-    search();
+    const filterUsers = () => {
+      let textValue = inputText.toString().toLowerCase();
+      const searched = usersClone.filter((person) => {
+        return (
+          (person.name.toString().toLowerCase().includes(textValue) ||
+            person.last_name.toString().toLowerCase().includes(textValue)) &&
+          (editors ? person.editor === "true" : true) &&
+          (newUsers ? person.account_made[2] > "2021" : true) &&
+          (moderators ? person.moderator === "true" : true)
+        );
+      });
+      getUsers(searched);
+    };
+    filterUsers();
     // eslint-disable-next-line
-  }, [inputText]);
+  }, [editors, moderators, newUsers, inputText]);
 
   return (
     <>
