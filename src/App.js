@@ -56,7 +56,7 @@ function App() {
   /* Filter users depending on filters (new users, editors, moderators) and input
   on the search box */
   let textValue = inputText.toString().toLowerCase();
-  const searched = users.filter((person) => {
+  const filtered = users.filter((person) => {
     const namelastname = person.name + person.last_name;
     const lastnamename = person.last_name + person.name;
     const namelastnamegap = person.name + " " + person.last_name;
@@ -97,7 +97,7 @@ function App() {
         </button>
       </div>
       <div className="users">
-        {searched.map((user) => {
+        {filtered.map((user) => {
           return <User {...user} key={user.id} />;
         })}
       </div>
