@@ -96,11 +96,13 @@ function App() {
           Moderators
         </button>
       </div>
+    <section className="users-container">
       <div className="users">
         {filtered.map((user) => {
           return <User {...user} key={user.id} />;
         })}
       </div>
+    </section>
     </>
   );
 }
